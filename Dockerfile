@@ -1,3 +1,5 @@
 from ubuntu
 run apt update -y
-run touch file1
+run apt install apache2 -y
+copy . /var/www/html/
+cmd ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
